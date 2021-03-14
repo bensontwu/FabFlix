@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461C0E0925FEB35800EFB254 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0825FEB35800EFB254 /* RoundedTextField.swift */; };
+		461C0E0E25FEBB4800EFB254 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0D25FEBB4800EFB254 /* FilterButton.swift */; };
 		4662A09A25FD95DC00A551D8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A09925FD95DB00A551D8 /* LoginView.swift */; };
 		4662A09E25FD986300A551D8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A09D25FD986300A551D8 /* RoundedButton.swift */; };
 		4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0A125FD9C6100A551D8 /* RegisterView.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		3A87D325616E1BC3F42123B1 /* Pods-FabFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FabFlix.debug.xcconfig"; path = "Target Support Files/Pods-FabFlix/Pods-FabFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		461C0E0825FEB35800EFB254 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		461C0E0D25FEBB4800EFB254 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		4662A09925FD95DB00A551D8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4662A09D25FD986300A551D8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4662A0A125FD9C6100A551D8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				4662A09D25FD986300A551D8 /* RoundedButton.swift */,
+				461C0E0825FEB35800EFB254 /* RoundedTextField.swift */,
+				461C0E0D25FEBB4800EFB254 /* FilterButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -317,11 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4662A09A25FD95DC00A551D8 /* LoginView.swift in Sources */,
+				461C0E0E25FEBB4800EFB254 /* FilterButton.swift in Sources */,
 				4662A0DA25FDF93000A551D8 /* GatewayClient.swift in Sources */,
 				4662A0DD25FDF9A100A551D8 /* APIConfig.swift in Sources */,
 				4662A0EC25FE099B00A551D8 /* SessionData.swift in Sources */,
 				4662A0B725FDD54F00A551D8 /* MovieStore.swift in Sources */,
 				4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */,
+				461C0E0925FEB35800EFB254 /* RoundedTextField.swift in Sources */,
 				4662A0CB25FDF05300A551D8 /* MovieDetail.swift in Sources */,
 				46D66EBC25FD5B6E00F6D92E /* ContentView.swift in Sources */,
 				46D66EBA25FD5B6E00F6D92E /* FabFlixApp.swift in Sources */,

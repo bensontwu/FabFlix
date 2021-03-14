@@ -17,10 +17,8 @@ struct LoginView: View {
             Text("Fabflix")
                 .font(.title)
             
-            TextField("Email", text: $email)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
+            RoundedTextField(placeholderText: "Email", textBinding: $email)
+            
             SecureField("Password", text: $password)
                 .padding()
                 .background(lightGreyColor)
