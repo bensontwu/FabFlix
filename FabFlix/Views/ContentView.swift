@@ -16,7 +16,7 @@ struct ContentView: View {
         if sessionStore.sessionId == "" {
             WelcomePage()
         } else {
-            Text("Search")
+            MovieList()
         }
     }
 }

@@ -12,6 +12,12 @@
 		4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0A125FD9C6100A551D8 /* RegisterView.swift */; };
 		4662A0A625FDA1AE00A551D8 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0A525FDA1AE00A551D8 /* SessionStore.swift */; };
 		4662A0AA25FDA24A00A551D8 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0A925FDA24A00A551D8 /* WelcomePage.swift */; };
+		4662A0B425FDD17400A551D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0B325FDD17400A551D8 /* Movie.swift */; };
+		4662A0B725FDD54F00A551D8 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0B625FDD54F00A551D8 /* MovieStore.swift */; };
+		4662A0BB25FDE56F00A551D8 /* movie-search.json in Resources */ = {isa = PBXBuildFile; fileRef = 4662A0BA25FDE56F00A551D8 /* movie-search.json */; };
+		4662A0C325FDEB0F00A551D8 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0C225FDEB0F00A551D8 /* MovieList.swift */; };
+		4662A0C725FDEBEC00A551D8 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0C625FDEBEC00A551D8 /* MovieRow.swift */; };
+		4662A0CB25FDF05300A551D8 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0CA25FDF05300A551D8 /* MovieDetail.swift */; };
 		46D66EBA25FD5B6E00F6D92E /* FabFlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D66EB925FD5B6E00F6D92E /* FabFlixApp.swift */; };
 		46D66EBC25FD5B6E00F6D92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D66EBB25FD5B6E00F6D92E /* ContentView.swift */; };
 		46D66EBE25FD5B7A00F6D92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46D66EBD25FD5B7A00F6D92E /* Assets.xcassets */; };
@@ -24,6 +30,12 @@
 		4662A0A125FD9C6100A551D8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		4662A0A525FDA1AE00A551D8 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		4662A0A925FDA24A00A551D8 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		4662A0B325FDD17400A551D8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		4662A0B625FDD54F00A551D8 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
+		4662A0BA25FDE56F00A551D8 /* movie-search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "movie-search.json"; sourceTree = "<group>"; };
+		4662A0C225FDEB0F00A551D8 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		4662A0C625FDEBEC00A551D8 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		4662A0CA25FDF05300A551D8 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		46D66EB625FD5B6E00F6D92E /* FabFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FabFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D66EB925FD5B6E00F6D92E /* FabFlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabFlixApp.swift; sourceTree = "<group>"; };
 		46D66EBB25FD5B6E00F6D92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,8 +58,9 @@
 		4662A0AD25FDA45500A551D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4662A0C525FDEBE200A551D8 /* Movie */,
 				4662A0B025FDA48700A551D8 /* Components */,
-				4662A0AF25FDA47900A551D8 /* Pages */,
+				4662A0AF25FDA47900A551D8 /* Welcome */,
 				46D66EBB25FD5B6E00F6D92E /* ContentView.swift */,
 			);
 			path = Views;
@@ -57,18 +70,20 @@
 			isa = PBXGroup;
 			children = (
 				4662A0A525FDA1AE00A551D8 /* SessionStore.swift */,
+				4662A0B625FDD54F00A551D8 /* MovieStore.swift */,
+				4662A0B325FDD17400A551D8 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4662A0AF25FDA47900A551D8 /* Pages */ = {
+		4662A0AF25FDA47900A551D8 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				4662A09925FD95DB00A551D8 /* LoginView.swift */,
 				4662A0A925FDA24A00A551D8 /* WelcomePage.swift */,
 				4662A0A125FD9C6100A551D8 /* RegisterView.swift */,
 			);
-			path = Pages;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		4662A0B025FDA48700A551D8 /* Components */ = {
@@ -77,6 +92,24 @@
 				4662A09D25FD986300A551D8 /* RoundedButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		4662A0B925FDE54100A551D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4662A0BA25FDE56F00A551D8 /* movie-search.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4662A0C525FDEBE200A551D8 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				4662A0C625FDEBEC00A551D8 /* MovieRow.swift */,
+				4662A0C225FDEB0F00A551D8 /* MovieList.swift */,
+				4662A0CA25FDF05300A551D8 /* MovieDetail.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		46D66EAD25FD5B6E00F6D92E = {
@@ -98,6 +131,7 @@
 		46D66EB825FD5B6E00F6D92E /* FabFlix */ = {
 			isa = PBXGroup;
 			children = (
+				4662A0B925FDE54100A551D8 /* Resources */,
 				4662A0AE25FDA46D00A551D8 /* Models */,
 				4662A0AD25FDA45500A551D8 /* Views */,
 				46D66EB925FD5B6E00F6D92E /* FabFlixApp.swift */,
@@ -174,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D66EC125FD5B7A00F6D92E /* Preview Assets.xcassets in Resources */,
+				4662A0BB25FDE56F00A551D8 /* movie-search.json in Resources */,
 				46D66EBE25FD5B7A00F6D92E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,11 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4662A09A25FD95DC00A551D8 /* LoginView.swift in Sources */,
+				4662A0B725FDD54F00A551D8 /* MovieStore.swift in Sources */,
 				4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */,
+				4662A0CB25FDF05300A551D8 /* MovieDetail.swift in Sources */,
 				46D66EBC25FD5B6E00F6D92E /* ContentView.swift in Sources */,
 				46D66EBA25FD5B6E00F6D92E /* FabFlixApp.swift in Sources */,
+				4662A0C725FDEBEC00A551D8 /* MovieRow.swift in Sources */,
 				4662A0AA25FDA24A00A551D8 /* WelcomePage.swift in Sources */,
 				4662A0A625FDA1AE00A551D8 /* SessionStore.swift in Sources */,
+				4662A0B425FDD17400A551D8 /* Movie.swift in Sources */,
+				4662A0C325FDEB0F00A551D8 /* MovieList.swift in Sources */,
 				4662A09E25FD986300A551D8 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

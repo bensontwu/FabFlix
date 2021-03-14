@@ -1,0 +1,102 @@
+[
+    {
+        "movie_id": "tt0143127",
+        "title": "Batman & Mr. Freeze: SubZero",
+        "backdrop_path": "/qYir2sJ8j2ZL0sAVPgtnGYyNuvm.jpg",
+        "poster_path": "/eIeT9dsFeKiKNxjWyXHTL92TTrJ.jpg",
+        "year": 1998,
+        "director": "Boyd Kirkland",
+        "rating": 6.9,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0118688",
+        "title": "Batman & Robin",
+        "backdrop_path": "/39jbxGwfR4wHBV7apo3JiNdHDHq.jpg",
+        "poster_path": "/79AYCcxw3kSKbhGpx1LiqaCAbwo.jpg",
+        "year": 1997,
+        "director": "Joel Schumacher",
+        "rating": 4.2,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt6556890",
+        "title": "Batman and Harley Quinn",
+        "backdrop_path": "/2JVnUtyUKbQm165cXUF9r5iVPDo.jpg",
+        "poster_path": "/uVdxoD9kn28qC8VQiVA6Uif1QHl.jpg",
+        "year": 2017,
+        "director": "Sam Liu",
+        "rating": 5.9,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0372784",
+        "title": "Batman Begins",
+        "backdrop_path": "/9myrRcegWGGp24mpVfkD4zhUfhi.jpg",
+        "poster_path": "/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+        "year": 2005,
+        "director": "Christopher Nolan",
+        "rating": 7.6,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0233298",
+        "title": "Batman Beyond: Return of the Joker",
+        "backdrop_path": "/pZCuxgUsDICPDKIFH8s5nQGeL4r.jpg",
+        "poster_path": "/vIRHN4AXaQM6mMVj8CozhtelYmF.jpg",
+        "year": 2000,
+        "director": "Curt Geda",
+        "rating": 7.6,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0231237",
+        "title": "Batman Beyond: The Movie",
+        "backdrop_path": "/qvHH190tlKmWH6uOz1cGpQnYY28.jpg",
+        "poster_path": "/7BCRuuuAVRzJbrm9IqvGaa12Lqo.jpg",
+        "year": 1999,
+        "director": "Butch Lukic",
+        "rating": 7.5,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0112462",
+        "title": "Batman Forever",
+        "backdrop_path": "/rI67zGyNZKa7ef8iiZN1lSJT7mp.jpg",
+        "poster_path": "/eTMrHEhlFPHNxpqGwpGGTdAa0xV.jpg",
+        "year": 1995,
+        "director": "Joel Schumacher",
+        "rating": 5.3,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt0103776",
+        "title": "Batman Returns",
+        "backdrop_path": "/wNIE5dpkiHU2csDRptMutFjAGiV.jpg",
+        "poster_path": "/jX5THE1yW3zTdeD9dupcIyQvKiG.jpg",
+        "year": 1992,
+        "director": "Tim Burton",
+        "rating": 6.8,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt4437640",
+        "title": "Batman Unlimited: Animal Instincts",
+        "backdrop_path": "/sJWdgdZanUZV2VpYAgDV5CSqVvE.jpg",
+        "poster_path": "/1N7KJtdGqiwGbHTWgqt5dleP3rP.jpg",
+        "year": 2015,
+        "director": "Butch Lukic",
+        "rating": 5.3,
+        "hidden": false
+    },
+    {
+        "movie_id": "tt5896146",
+        "title": "Batman Unlimited: Mechs vs. Mutants",
+        "backdrop_path": "/kXExQoACzWwvxnOvKAJnCFFYbhM.jpg",
+        "poster_path": "/bppmdOACqo9svFfZnITZAk3nAT3.jpg",
+        "year": 2016,
+        "director": "Curt Geda",
+        "rating": 5.6,
+        "hidden": false
+    }
+]
