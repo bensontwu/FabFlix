@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct FabFlixApp: App {
+    let sessionStore = SessionStore()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(SessionStore())
+                .environmentObject(sessionStore)
+                .environmentObject(MovieStore(sessionStore: sessionStore))
         }
     }
 }

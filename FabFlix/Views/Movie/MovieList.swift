@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MovieList: View {
-    @ObservedObject var movieStore: MovieStore = MovieStore()
+    @EnvironmentObject var movieStore: MovieStore
+    @EnvironmentObject var sessionStore: SessionStore
     
     var body: some View {
         NavigationView {
@@ -19,7 +20,11 @@ struct MovieList: View {
             }
             .navigationTitle("Movies")
         }
-
+    }
+    
+    func refreshMovies() {
+        // TODO: update params!
+        movieStore.refreshMovies(params: ["title": "batman"])
     }
 }
 

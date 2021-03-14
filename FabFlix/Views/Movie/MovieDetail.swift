@@ -38,7 +38,9 @@ struct MovieDetail: View {
 }
 
 struct MovieDetail_Previews: PreviewProvider {
+    static let sessionStore = SessionStore()
+    
     static var previews: some View {
-        MovieDetail(movie: MovieStore().movies[0])
+        MovieDetail(movie: MovieStore(sessionStore: sessionStore).movies[0])
     }
 }

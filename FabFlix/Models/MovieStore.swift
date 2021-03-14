@@ -8,14 +8,28 @@
 import Foundation
 
 final class MovieStore: ObservableObject {
-    @Published var movies: [Movie] = loadMovies(jsonData: loadJsonArray("movie-search.json"))
     
-    private static func loadMovies(jsonData: [[String: Any]]) -> [Movie] {
+    @Published var movies: [Movie] = []
+    var sessionStore: SessionStore
+    
+    private final let movieClient = MovieClient()
+    
+    init(sessionStore: SessionStore) {
+        self.sessionStore = sessionStore
+        refreshMovies(params: [:])
+    }
+    
+    public func refreshMovies(params: [String: Any]) {
+        movieClient.search(sessionData: sessionStore.sessionData, params: params) { jsonArray in
+            self.movies = MovieStore.loadMovies(jsonArray: jsonArray)
+        }
+    }
+    
+    private static func loadMovies(jsonArray: [[String: Any]]) -> [Movie] {
         var movies: [Movie] = []
-        for movieJson in jsonData {
+        for movieJson in jsonArray {
             if let movie = Movie(json: movieJson) {
                 movies.append(movie)
-            } else {
             }
         }
         return movies

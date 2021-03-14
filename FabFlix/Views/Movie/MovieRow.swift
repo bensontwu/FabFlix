@@ -26,9 +26,11 @@ struct MovieRow: View {
 }
 
 struct MovieRow_Previews: PreviewProvider {
+    static let sessionStore = SessionStore()
+    
     static var previews: some View {
         Group {
-            MovieRow(movie: MovieStore().movies[0])
+            MovieRow(movie: MovieStore(sessionStore: sessionStore).movies[0])
         }
         .previewLayout(.fixed(width: 400, height: 70))
     }
