@@ -9,15 +9,17 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var sessionStore: SessionStore
-    @State var email: String = ""
-    @State var password: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var showingAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         VStack {
             Text("Fabflix")
                 .font(.title)
             
-            RoundedTextField(placeholderText: "Email", textBinding: $email)
+            RoundedTextField(placeholderText: "Email", autoCapitalizaition: .none, textBinding: $email)
             
             SecureField("Password", text: $password)
                 .padding()
@@ -27,11 +29,20 @@ struct LoginView: View {
             RoundedButton(title: "Login", foregroundColor: .white, backgroundColor: .yellow) {
                 login()
             }
-        }.padding()
+        }
+        .padding()
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Login failed"), message: Text(alertMessage), dismissButton: .default(Text("Try again")))
+        }
     }
     
     private func login() {
-        sessionStore.setSession(email: email, sessionId: "asdadfasf")
+        sessionStore.login(email: email, password: password) { idmResult, message in
+            if let message = message {
+                alertMessage = message
+            }
+            showingAlert = true
+        }
     }
 }
 

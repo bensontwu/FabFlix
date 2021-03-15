@@ -13,12 +13,12 @@ struct ContentView: View {
     @EnvironmentObject private var sessionStore: SessionStore
     
     var body: some View {
-//        if sessionStore.sessionId == "" {
-//            WelcomePage()
-//        } else {
-//            MovieList()
-//        }
-        MovieList() // FOR QUICKER TESTING
+        if sessionStore.sessionId == "" {
+            WelcomePage()
+        } else {
+            MovieList()
+        }
+//        MovieList() // FOR QUICKER TESTING
     }
 }
 

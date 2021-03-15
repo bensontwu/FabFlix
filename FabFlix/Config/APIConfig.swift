@@ -17,4 +17,6 @@ class APIConfig {
     
     static let movieSearchResultCodeSuccess = 210
     static let movieGetResultCodeSuccess = 210
+    static let idmRegisterResultCodeSuccess = 110
+    static let idmLoginResultCodeSuccess = 120
 }
