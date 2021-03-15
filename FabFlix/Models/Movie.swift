@@ -43,3 +43,78 @@ class Movie: Identifiable {
         self.posterPath = posterPath
     }
 }
+
+class DetailedMovie: Movie {
+    
+    var genres: [Genre]
+    var people: [Person]
+    
+    override init?(json: [String: Any]) {
+        guard let genresJsonArr = json["genres"] as? [[String: Any]],
+              let genres = Genre.getGenres(jsonArray: genresJsonArr),
+              let peopleJsonArr = json["people"] as? [[String: Any]],
+              let people = Person.getPeople(jsonArray: peopleJsonArr)
+        else {
+            return nil
+        }
+        
+        self.genres = genres
+        self.people = people
+        
+        super.init(json: json)
+    }
+}
+
+struct Person: Identifiable {
+    var id: Int
+    var name: String
+    
+    init?(json: [String: Any]) {
+        guard let id = json["person_id"] as? Int,
+              let name = json["name"] as? String
+        else {
+            return nil
+        }
+        
+        self.id = id
+        self.name = name
+    }
+    
+    static func getPeople(jsonArray: [[String: Any]]) -> [Person]? {
+        var people: [Person] = []
+        for jsonObj in jsonArray {
+            if let person = Person(json: jsonObj) {
+                people.append(person)
+            }
+        }
+        if people.count == 0 { return nil }
+        return people
+    }
+}
+
+struct Genre: Identifiable {
+    var id: Int
+    var name: String
+    
+    init?(json: [String: Any]) {
+        guard let id = json["genre_id"] as? Int,
+              let name = json["name"] as? String
+        else {
+            return nil
+        }
+        
+        self.id = id
+        self.name = name
+    }
+    
+    static func getGenres(jsonArray: [[String: Any]]) -> [Genre]? {
+        var genres: [Genre] = []
+        for jsonObj in jsonArray {
+            if let genre = Genre(json: jsonObj) {
+                genres.append(genre)
+            }
+        }
+        if genres.count == 0 { return nil }
+        return genres
+    }
+}

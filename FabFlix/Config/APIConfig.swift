@@ -16,4 +16,5 @@ class APIConfig {
     static let apiGatewayAttempts: Int = 20
     
     static let movieSearchResultCodeSuccess = 210
+    static let movieGetResultCodeSuccess = 210
 }

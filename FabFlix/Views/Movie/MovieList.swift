@@ -50,7 +50,7 @@ struct MovieList: View {
                     }
                     
                     ForEach(movieStore.movies) { movie in
-                        NavigationLink(destination: MovieDetail(movie: movie)) {
+                        NavigationLink(destination: MovieDetail(movie: movie).environmentObject(movieStore)) {
                             MovieRow(movie: movie)
                         }
                     }

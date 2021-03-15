@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct MovieDetail: View {
+    
     var movie: Movie
+    @State var detailedMovie: DetailedMovie?
+    @EnvironmentObject var movieStore: MovieStore
     
     var body: some View {
         ScrollView {
@@ -31,8 +34,41 @@ struct MovieDetail: View {
                 Divider()
                 
                 Text("Directed by: \(movie.director)")
+                
+                Divider()
+                
+                if let detailedMovie = detailedMovie {
+                    Text("Genres")
+                        .font(.title2)
+                    
+                    ForEach(detailedMovie.genres) { genre in
+                        Text(genre.name)
+                    }
+                    
+                    Divider()
+                    
+                    Group {
+                        Text("People")
+                            .font(.title2)
+                        
+                        ForEach(detailedMovie.people) { person in
+                            Text(person.name)
+                        }
+                    }
+                }
             }
             .padding()
+        }
+        .onAppear() {
+            fetchMovie()
+        }
+    }
+    
+    private func fetchMovie() {
+        movieStore.getMovie(movieId: movie.id) { detailedMovie in
+            if let detailedMovie = detailedMovie {
+                self.detailedMovie = detailedMovie
+            }
         }
     }
 }

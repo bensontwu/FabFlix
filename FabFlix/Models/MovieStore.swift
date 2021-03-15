@@ -25,6 +25,12 @@ final class MovieStore: ObservableObject {
         }
     }
     
+    public func getMovie(movieId: String, handler: @escaping (DetailedMovie?) -> ()) {
+        movieClient.get(sessionData: sessionStore.sessionData, movieId: movieId) { jsonObj in
+            handler(DetailedMovie(json: jsonObj))
+        }
+    }
+    
     private static func loadMovies(jsonArray: [[String: Any]]) -> [Movie] {
         var movies: [Movie] = []
         for movieJson in jsonArray {
