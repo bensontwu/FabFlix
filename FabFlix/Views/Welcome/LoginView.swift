@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var sessionStore: SessionStore
+    @Binding var idmViewState: IdmViewState
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showingAlert = false
@@ -47,8 +48,10 @@ struct LoginView: View {
 }
 
 struct LoginView_Previews: PreviewProvider {
+    @State static var idmViewState: IdmViewState = .login
+    
     static var previews: some View {
-        LoginView()
+        LoginView(idmViewState: $idmViewState)
             .environmentObject(SessionStore())
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4615280525FF24B2006DDBAF /* IdmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615280425FF24B2006DDBAF /* IdmView.swift */; };
 		461C0E0925FEB35800EFB254 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0825FEB35800EFB254 /* RoundedTextField.swift */; };
 		461C0E0E25FEBB4800EFB254 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0D25FEBB4800EFB254 /* FilterButton.swift */; };
 		461C0E1825FEEDF800EFB254 /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E1725FEEDF800EFB254 /* SearchPanel.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		3A87D325616E1BC3F42123B1 /* Pods-FabFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FabFlix.debug.xcconfig"; path = "Target Support Files/Pods-FabFlix/Pods-FabFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		4615280425FF24B2006DDBAF /* IdmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdmView.swift; sourceTree = "<group>"; };
 		461C0E0825FEB35800EFB254 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		461C0E0D25FEBB4800EFB254 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		461C0E1725FEEDF800EFB254 /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		4662A0AF25FDA47900A551D8 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				4615280425FF24B2006DDBAF /* IdmView.swift */,
 				4662A09925FD95DB00A551D8 /* LoginView.swift */,
 				4662A0A125FD9C6100A551D8 /* RegisterView.swift */,
 				4662A0A925FDA24A00A551D8 /* WelcomePage.swift */,
@@ -336,6 +339,7 @@
 				4662A0B725FDD54F00A551D8 /* MovieStore.swift in Sources */,
 				4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */,
 				461C0E1E25FF097D00EFB254 /* IdmClient.swift in Sources */,
+				4615280525FF24B2006DDBAF /* IdmView.swift in Sources */,
 				461C0E0925FEB35800EFB254 /* RoundedTextField.swift in Sources */,
 				4662A0CB25FDF05300A551D8 /* MovieDetail.swift in Sources */,
 				46D66EBC25FD5B6E00F6D92E /* ContentView.swift in Sources */,

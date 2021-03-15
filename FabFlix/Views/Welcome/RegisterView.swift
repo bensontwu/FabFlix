@@ -9,8 +9,10 @@ import SwiftUI
 
 struct RegisterView: View {
     @EnvironmentObject var sessionStore: SessionStore
+    @Binding var idmViewState: IdmViewState
     @State var email: String = ""
     @State var password: String = ""
+    @State private var idmResult: IdmResult = .failure
     @State private var showingAlert = false
     @State private var alertMessage = ""
     
@@ -32,7 +34,14 @@ struct RegisterView: View {
         }
         .padding()
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertMessage), dismissButton: .default(Text("OK")))
+            Alert(title: Text(alertMessage), dismissButton: .default(Text("OK")) {
+                switch idmResult {
+                case .failure:
+                    return
+                case .success:
+                    idmViewState = .login
+                }
+            })
         }
     }
     
@@ -41,13 +50,17 @@ struct RegisterView: View {
             if let message = message {
                 alertMessage = message
             }
+            self.idmResult = idmResult
             showingAlert = true
         }
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
+    @State static var idmViewState: IdmViewState = .register
+    
     static var previews: some View {
-        RegisterView()
+        RegisterView(idmViewState: $idmViewState)
+            .environmentObject(SessionStore())
     }
 }

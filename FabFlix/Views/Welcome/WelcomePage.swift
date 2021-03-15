@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WelcomePage: View {
+    
+    @State private var idmViewState: IdmViewState = .login
+    @State private var action: Int?
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -16,12 +20,17 @@ struct WelcomePage: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: RegisterView()) {
-                    RoundedButton(title: "Sign Up", foregroundColor: .white, backgroundColor: .black) {}
+                NavigationLink(destination: IdmView(idmViewState: $idmViewState), tag: 1, selection: $action) {
                 }
                 
-                NavigationLink(destination: LoginView()) {
-                    RoundedButton(title: "Login", foregroundColor: .white, backgroundColor: .yellow) {}
+                RoundedButton(title: "Sign Up", foregroundColor: .white, backgroundColor: .black) {
+                    idmViewState = .register
+                    action = 1
+                }
+                
+                RoundedButton(title: "Login", foregroundColor: .white, backgroundColor: .yellow) {
+                    idmViewState = .login
+                    action = 1
                 }
                 
                 Spacer()

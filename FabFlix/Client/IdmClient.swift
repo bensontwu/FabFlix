@@ -8,10 +8,12 @@
 import Foundation
 import Alamofire
 
-enum IdmResult {
+enum Result {
     case failure
     case success
 }
+
+typealias IdmResult = Result
 
 final class IdmClient {
     
