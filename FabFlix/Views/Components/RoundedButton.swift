@@ -11,6 +11,7 @@ struct RoundedButton: View {
     var title: String
     var foregroundColor: Color
     var backgroundColor: Color
+    var maxWidth: CGFloat = .infinity
     var action: () -> ()
     
     var body: some View {
@@ -18,7 +19,7 @@ struct RoundedButton: View {
             action()
         }
         .padding(.vertical, 10)
-        .frame(minWidth: 0, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .frame(minWidth: 0, maxWidth: maxWidth)
         .font(.title3)
         .background(backgroundColor)
         .foregroundColor(foregroundColor)

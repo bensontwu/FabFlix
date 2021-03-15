@@ -17,6 +17,8 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("Fabflix")
                 .font(.title)
             
@@ -29,6 +31,13 @@ struct LoginView: View {
             
             RoundedButton(title: "Login", foregroundColor: .white, backgroundColor: .yellow) {
                 login()
+            }
+            
+            Spacer()
+            
+            RoundedButton(title: "Register", foregroundColor: .black,
+                          backgroundColor: lightGreyColor, maxWidth: 100) {
+                idmViewState = .register
             }
         }
         .padding()

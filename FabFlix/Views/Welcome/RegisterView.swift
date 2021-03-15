@@ -18,6 +18,8 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("Fabflix")
                 .font(.title)
             
@@ -30,6 +32,13 @@ struct RegisterView: View {
             
             RoundedButton(title: "Sign Up", foregroundColor: .white, backgroundColor: .black) {
                 register()
+            }
+            
+            Spacer()
+            
+            RoundedButton(title: "Login", foregroundColor: .black,
+                          backgroundColor: lightGreyColor, maxWidth: 100) {
+                idmViewState = .login
             }
         }
         .padding()
