@@ -32,7 +32,7 @@ struct RegisterView: View {
         }
         .padding()
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Register failed"), message: Text(alertMessage), dismissButton: .default(Text("Try again")))
+            Alert(title: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
     }
     

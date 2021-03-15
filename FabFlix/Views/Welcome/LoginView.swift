@@ -32,7 +32,7 @@ struct LoginView: View {
         }
         .padding()
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Login failed"), message: Text(alertMessage), dismissButton: .default(Text("Try again")))
+            Alert(title: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
     }
     
