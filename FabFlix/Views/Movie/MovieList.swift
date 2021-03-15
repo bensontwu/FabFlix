@@ -35,12 +35,14 @@ struct MovieList: View {
     @State var orderBy: OrderBy = OrderBy.title
     @State var direction: Direction = Direction.asc
     
+    @State var offset: Int = 0
+    
     @State var filterOffset : CGFloat = UIScreen.main.bounds.height
     
     var body: some View {
         NavigationView {
             ZStack {
-                List {
+                VStack {
                     HStack {
                         RoundedTextField(placeholderText: "Search", textBinding: $searchText)
 
@@ -48,17 +50,34 @@ struct MovieList: View {
                             self.filterOffset = 0
                         }
                     }
+                    .padding(.horizontal)
                     
-                    ForEach(movieStore.movies) { movie in
-                        NavigationLink(destination: MovieDetail(movie: movie).environmentObject(movieStore)) {
-                            MovieRow(movie: movie)
+                    HStack(alignment: .center) {
+                        FilterButton(title: "<") {
+                            if offset == 0 { return }
+                            offset -= 10
+                            refreshMovies()
+                        }
+                        
+                        FilterButton(title: ">") {
+                            offset += 10
+                            refreshMovies()
                         }
                     }
-                }
-                .navigationTitle("Movies")
-                .toolbar {
-                    Button("Sign Out") {
-                        sessionStore.reset()
+                    .padding(.horizontal)
+                    
+                    List {
+                        ForEach(movieStore.movies) { movie in
+                            NavigationLink(destination: MovieDetail(movie: movie).environmentObject(movieStore)) {
+                                MovieRow(movie: movie)
+                            }
+                        }
+                    }
+                    .navigationTitle("Movies")
+                    .toolbar {
+                        Button("Sign Out") {
+                            sessionStore.reset()
+                        }
                     }
                 }
                 
@@ -67,6 +86,7 @@ struct MovieList: View {
                     Spacer()
                     
                     SearchPanel(title: $title, director: $director, genre: $genre, year: $year, orderBy: $orderBy, direction: $direction) {
+                        offset = 0
                         refreshMovies()
                     }
                         .offset(y: self.filterOffset)
@@ -109,6 +129,7 @@ struct MovieList: View {
         }
         params["direction"] = direction.rawValue
         params["orderby"] = orderBy.rawValue
+        params["offset"] = String(offset)
         return params
     }
     
