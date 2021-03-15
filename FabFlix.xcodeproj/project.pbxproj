@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		461C0E0925FEB35800EFB254 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0825FEB35800EFB254 /* RoundedTextField.swift */; };
 		461C0E0E25FEBB4800EFB254 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E0D25FEBB4800EFB254 /* FilterButton.swift */; };
+		461C0E1825FEEDF800EFB254 /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C0E1725FEEDF800EFB254 /* SearchPanel.swift */; };
 		4662A09A25FD95DC00A551D8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A09925FD95DB00A551D8 /* LoginView.swift */; };
 		4662A09E25FD986300A551D8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A09D25FD986300A551D8 /* RoundedButton.swift */; };
 		4662A0A225FD9C6100A551D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662A0A125FD9C6100A551D8 /* RegisterView.swift */; };
@@ -35,6 +36,7 @@
 		3A87D325616E1BC3F42123B1 /* Pods-FabFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FabFlix.debug.xcconfig"; path = "Target Support Files/Pods-FabFlix/Pods-FabFlix.debug.xcconfig"; sourceTree = "<group>"; };
 		461C0E0825FEB35800EFB254 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		461C0E0D25FEBB4800EFB254 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		461C0E1725FEEDF800EFB254 /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
 		4662A09925FD95DB00A551D8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4662A09D25FD986300A551D8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4662A0A125FD9C6100A551D8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				4662A0C625FDEBEC00A551D8 /* MovieRow.swift */,
 				4662A0C225FDEB0F00A551D8 /* MovieList.swift */,
 				4662A0CA25FDF05300A551D8 /* MovieDetail.swift */,
+				461C0E1725FEEDF800EFB254 /* SearchPanel.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				46D66EBA25FD5B6E00F6D92E /* FabFlixApp.swift in Sources */,
 				4662A0C725FDEBEC00A551D8 /* MovieRow.swift in Sources */,
 				4662A0AA25FDA24A00A551D8 /* WelcomePage.swift in Sources */,
+				461C0E1825FEEDF800EFB254 /* SearchPanel.swift in Sources */,
 				4662A0A625FDA1AE00A551D8 /* SessionStore.swift in Sources */,
 				4662A0B425FDD17400A551D8 /* Movie.swift in Sources */,
 				4662A0C325FDEB0F00A551D8 /* MovieList.swift in Sources */,
