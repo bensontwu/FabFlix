@@ -33,11 +33,28 @@ struct MovieDetail: View {
                 
                 Divider()
                 
-                Text("Directed by: \(movie.director)")
+                HStack {
+                    Text("Directed by: \(movie.director)")
+                    
+                    Spacer()
+                    
+                    if let detailedMovie = detailedMovie {
+                        Text("Votes: \(detailedMovie.numVotes)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
                 
                 Divider()
                 
                 if let detailedMovie = detailedMovie {
+                    
+                    Text("Overview")
+                        .font(.title2)
+                    Text(detailedMovie.overview)
+                    
+                    Divider()
+                    
                     Text("Genres")
                         .font(.title2)
                     
@@ -55,6 +72,8 @@ struct MovieDetail: View {
                             Text(person.name)
                         }
                     }
+                    
+                    Divider()
                 }
             }
             .padding()

@@ -46,11 +46,15 @@ class Movie: Identifiable {
 
 class DetailedMovie: Movie {
     
+    var numVotes: Int
+    var overview: String
     var genres: [Genre]
     var people: [Person]
     
     override init?(json: [String: Any]) {
-        guard let genresJsonArr = json["genres"] as? [[String: Any]],
+        guard let numVotes = json["num_votes"] as? Int,
+              let overview = json["overview"] as? String,
+              let genresJsonArr = json["genres"] as? [[String: Any]],
               let genres = Genre.getGenres(jsonArray: genresJsonArr),
               let peopleJsonArr = json["people"] as? [[String: Any]],
               let people = Person.getPeople(jsonArray: peopleJsonArr)
@@ -58,6 +62,8 @@ class DetailedMovie: Movie {
             return nil
         }
         
+        self.numVotes = numVotes
+        self.overview = overview
         self.genres = genres
         self.people = people
         
